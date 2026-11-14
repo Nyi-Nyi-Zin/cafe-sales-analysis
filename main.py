@@ -20,16 +20,17 @@ COLUMNS = {
 
 def prepare_sales(raw: pd.DataFrame):
     df = raw[list(COLUMNS)].rename(columns=COLUMNS)
-    print(df)
+    # print(df)
 
 
 def clean_sales():
-    raw = pd.read_csv("dirty_cafe_sales.csv", dtype="string", keep_default_na=False)
+    raw = pd.read_csv(INPUT_FILE, dtype="string", keep_default_na=False)
+    print(raw)
     prepare_sales(raw)
 
 
 # def main():
 #     pass
 
-clean_sales()
+# clean_sales()
 # main()
