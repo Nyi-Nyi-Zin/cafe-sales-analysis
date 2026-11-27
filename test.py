@@ -12,3 +12,13 @@
 
 # main.py =>   Relative Path
 # D:\Desktop\cafe_sales_analysis\main.py  => Absolute Path
+import pandas as pd
+
+test = pd.DataFrame({
+    "sample":["mangon","",566,"apple   ","  "]
+})
+
+for column in test.columns:
+    blank_count = test[column].str.strip().eq("").sum()
+    print(test[column].str.strip().eq("").sum())
+  
